@@ -1,0 +1,20 @@
+{
+  "name": "annihilationwizard-mods",
+  "description": "Claude Code mods by AnnihilationWizard",
+  "owner": {
+    "name": "AnnihilationWizard",
+    "url": "https://github.com/AnnihilationWizard"
+  },
+  "plugins": [
+    {
+      "name": "quiet-diffs",
+      "description": "Show Claude Code file edits as one-line summaries instead of full diffs",
+      "source": { "source": "github", "repo": "AnnihilationWizard/quiet-diffs" }
+    },
+    {
+      "name": "you-should-know-relay",
+      "description": "Forward each you-should-know heads-up to Claude, so you no longer paste it in yourself",
+      "source": { "source": "github", "repo": "AnnihilationWizard/you-should-know-relay" }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Each mod is its own Git repository; this repo only lists them
+/quiet-diffs/
+/you-should-know-relay/
+
+.claude/
+.DS_Store
