@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#mods"><img src="https://img.shields.io/badge/Mods-2-green.svg" alt="2 mods"></a>
+  <a href="#mods"><img src="https://img.shields.io/badge/Mods-3-green.svg" alt="3 mods"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
   <a href=".claude-plugin/marketplace.json"><img src="https://img.shields.io/badge/Type-Plugin%20marketplace-6E7681.svg" alt="Plugin marketplace"></a>
 </p>
@@ -27,6 +27,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | --- | --- |
 | [quiet-diffs](https://github.com/AnnihilationWizard/quiet-diffs) | Shows file edits as one-line summaries instead of full diffs |
 | [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
+| [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
 
 ### quiet-diffs
 
@@ -39,6 +40,10 @@ Each mod lives in its own repository, with its own version, changelog and issues
 **Claude hears the heads-up too.** When the built-in you-should-know plugin shows a heads-up above the prompt, the mod hands the same heads-up to Claude, while it stays on your screen as before.
 
 ![Side-by-side Claude Code session: on the left a heads-up is pasted in by hand, on the right the same heads-up is forwarded to Claude with a confirming toast](https://raw.githubusercontent.com/AnnihilationWizard/you-should-know-relay/main/docs/images/preview.svg)
+
+### chrome-close
+
+**One headless Chrome at a time.** Before Claude runs a command that may start a headless Chrome, the mod checks for one still running, or for helpers a closed one left behind, and refuses the launch with the PIDs to end. It guards only commands Claude runs.
 
 ## Install
 
@@ -53,6 +58,7 @@ Then install the mods you want:
 ```
 /plugin install quiet-diffs@annihilationwizard-mods
 /plugin install you-should-know-relay@annihilationwizard-mods
+/plugin install chrome-close@annihilationwizard-mods
 ```
 
 1. Choose a scope for each mod. The **user** scope loads the mod in every session.

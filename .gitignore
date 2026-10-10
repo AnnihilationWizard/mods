@@ -1,6 +1,7 @@
 # Each mod is its own Git repository; this repo only lists them
 /quiet-diffs/
 /you-should-know-relay/
+/chrome-close/
 
 .claude/
 .DS_Store

@@ -15,6 +15,11 @@
       "name": "you-should-know-relay",
       "description": "Forward each you-should-know heads-up to Claude, so you no longer paste it in yourself",
       "source": { "source": "github", "repo": "AnnihilationWizard/you-should-know-relay" }
+    },
+    {
+      "name": "chrome-close",
+      "description": "Allow one headless Chrome at a time: refuse Claude's launches while any headless Chrome or its leftover helpers still run",
+      "source": { "source": "github", "repo": "AnnihilationWizard/chrome-close" }
     }
   ]
 }
