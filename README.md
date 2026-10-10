@@ -65,7 +65,7 @@ Then install the mods you want:
 /plugin install quiet-diffs --marketplace AnnihilationWizard/mods
 ```
 
-Answer `y` to add the `github:AnnihilationWizard/mods` marketplace. This form needs Claude Code 2.1.275 or newer in a session, or 2.1.292 or newer from a shell.
+Answer `y` to add the `github:AnnihilationWizard/mods` marketplace.
 
 </details>
 
