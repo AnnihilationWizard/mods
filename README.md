@@ -27,10 +27,10 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ## Mods
 
-| Mod | What it does | Built for |
-| --- | --- | --- |
-| [quiet-diffs](https://github.com/AnnihilationWizard/quiet-diffs) | Shows file edits as one-line summaries instead of full diffs | Claude Code 2.1.292+ |
-| [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself | Claude Code 2.1.295+ |
+| Mod | What it does |
+| --- | --- |
+| [quiet-diffs](https://github.com/AnnihilationWizard/quiet-diffs) | Shows file edits as one-line summaries instead of full diffs |
+| [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
 
 ### quiet-diffs
 
