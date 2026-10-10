@@ -8,7 +8,6 @@
 <p align="center">
   <a href="#mods"><img src="https://img.shields.io/badge/Mods-2-green.svg" alt="2 mods"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
-  <a href="https://code.claude.com/docs"><img src="https://img.shields.io/badge/Claude%20Code-2.1.292%2B-D97757.svg" alt="Claude Code 2.1.292+"></a>
   <a href=".claude-plugin/marketplace.json"><img src="https://img.shields.io/badge/Type-Plugin%20marketplace-6E7681.svg" alt="Plugin marketplace"></a>
 </p>
 
@@ -21,9 +20,6 @@
 </p>
 
 Each mod lives in its own repository, with its own version, changelog and issues. This repository only holds the catalog in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json), so Claude Code fetches each mod from its own repository when you install it. You can install, update or turn off each mod on its own.
-
-> [!NOTE]
-> These mods are built on Claude Code's function-hooks mod API, which is in early access and may change between releases. Each mod's README lists the Claude Code version it was built and tested against.
 
 ## Mods
 
