@@ -9,17 +9,17 @@
     {
       "name": "quiet-diffs",
       "description": "Show Claude Code file edits as one-line summaries instead of full diffs",
-      "source": { "source": "github", "repo": "AnnihilationWizard/quiet-diffs" }
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/quiet-diffs.git" }
     },
     {
       "name": "you-should-know-relay",
       "description": "Forward each you-should-know heads-up to Claude, so you no longer paste it in yourself",
-      "source": { "source": "github", "repo": "AnnihilationWizard/you-should-know-relay" }
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/you-should-know-relay.git" }
     },
     {
       "name": "chrome-close",
       "description": "Allow one headless Chrome at a time: refuse Claude's launches while any headless Chrome or its leftover helpers still run",
-      "source": { "source": "github", "repo": "AnnihilationWizard/chrome-close" }
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/chrome-close.git" }
     }
   ]
 }

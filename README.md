@@ -102,7 +102,7 @@ To update automatically, open `/plugin` > **Marketplaces** and enable auto-updat
    {
      "name": "my-mod",
      "description": "What the mod does, in one line",
-     "source": { "source": "github", "repo": "AnnihilationWizard/my-mod" }
+     "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/my-mod.git" }
    }
    ```
 
