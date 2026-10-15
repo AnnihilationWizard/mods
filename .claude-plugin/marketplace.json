@@ -21,6 +21,11 @@
       "name": "chrome-close",
       "description": "Allow one headless Chrome at a time: refuse Claude's launches while any headless Chrome or its leftover helpers still run",
       "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/chrome-close.git" }
+    },
+    {
+      "name": "secret-guard",
+      "description": "Add a gitleaks commit hook to each Git project you open: pre-commit for most projects, Husky for JS/TS",
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/secret-guard.git" }
     }
   ]
 }

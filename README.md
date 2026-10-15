@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#mods"><img src="https://img.shields.io/badge/Mods-3-green.svg" alt="3 mods"></a>
+  <a href="#mods"><img src="https://img.shields.io/badge/Mods-4-green.svg" alt="4 mods"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
   <a href=".claude-plugin/marketplace.json"><img src="https://img.shields.io/badge/Type-Plugin%20marketplace-6E7681.svg" alt="Plugin marketplace"></a>
 </p>
@@ -28,6 +28,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | [quiet-diffs](https://github.com/AnnihilationWizard/quiet-diffs) | Shows file edits as one-line summaries instead of full diffs |
 | [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
 | [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
+| [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks commit hook to each Git project you open |
 
 ### quiet-diffs
 
@@ -47,6 +48,10 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ![Side-by-side Claude Code session: on the left three test runs leave headless Chrome processes holding 1.2 GB; on the right the second launch is refused with the PIDs to end, Claude kills them and the next run goes ahead](https://raw.githubusercontent.com/AnnihilationWizard/chrome-close/main/docs/images/preview.svg)
 
+### secret-guard
+
+**Secrets stop at the commit.** When a session starts in a Git project, the mod checks for a gitleaks pre-commit hook and adds one if it is missing: a `.pre-commit-config.yaml` that runs your global `gitleaks` for most projects, or a `.husky/pre-commit` step for JS/TS projects. It needs `gitleaks` installed, plus `pre-commit` outside JS/TS, never rewrites an existing config that lacks gitleaks, and adds husky as a dependency only when you turn on its `autoInstallHusky` option.
+
 ## Install
 
 In a Claude Code **terminal** session, add the marketplace once:
@@ -61,6 +66,7 @@ Then install the mods you want:
 /plugin install quiet-diffs@annihilationwizard-mods
 /plugin install you-should-know-relay@annihilationwizard-mods
 /plugin install chrome-close@annihilationwizard-mods
+/plugin install secret-guard@annihilationwizard-mods
 ```
 
 1. Choose a scope for each mod. The **user** scope loads the mod in every session.
