@@ -24,7 +24,7 @@
     },
     {
       "name": "secret-guard",
-      "description": "Add a gitleaks commit hook to each Git project you open: pre-commit for most projects, Husky for JS/TS",
+      "description": "Add a gitleaks pre-commit hook to each Git project you open in Claude Code: pre-commit for most projects, Husky for JS/TS",
       "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/secret-guard.git" }
     }
   ]

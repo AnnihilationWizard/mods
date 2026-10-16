@@ -28,7 +28,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | [quiet-diffs](https://github.com/AnnihilationWizard/quiet-diffs) | Shows file edits as one-line summaries instead of full diffs |
 | [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
 | [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
-| [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks commit hook to each Git project you open |
+| [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks pre-commit hook to each Git project and worktree you open |
 
 ### quiet-diffs
 
@@ -50,7 +50,9 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ### secret-guard
 
-**Secrets stop at the commit.** When a session starts in a Git project, the mod checks for a gitleaks pre-commit hook and adds one if it is missing: a `.pre-commit-config.yaml` that runs your global `gitleaks` for most projects, or a `.husky/pre-commit` step for JS/TS projects. It needs `gitleaks` installed, plus `pre-commit` outside JS/TS, never rewrites an existing config that lacks gitleaks, and adds husky as a dependency only when you turn on its `autoInstallHusky` option.
+**Secrets stop at the commit.** When a session starts in a Git project, or Claude enters a worktree, the mod checks for a gitleaks pre-commit hook and adds one if it is missing: a `.pre-commit-config.yaml` that runs your installed `gitleaks` for most projects, or a `.husky/pre-commit` step for JS/TS projects. It fixes worktrees whose commits are blocked by a missing config, reminds you to commit the hook file, and never rewrites an existing config or adds dependencies unless you opt in. Needs `gitleaks`, plus `pre-commit` outside JS/TS.
+
+![Side-by-side terminal: on the left a fresh clone has no hook and a commit with a GitHub token lands in history; on the right secret-guard sets up a gitleaks hook when Claude Code starts and the same commit is stopped](https://raw.githubusercontent.com/AnnihilationWizard/secret-guard/main/docs/images/preview.svg)
 
 ## Install
 
