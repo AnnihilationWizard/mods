@@ -57,7 +57,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ### node-close
 
-**Finished commands leave no Node behind.** After a shell command Claude runs finishes, the mod ends the Node processes it started and left running, such as a test runner, its workers and their esbuild service: `SIGTERM`, then `SIGKILL` after a second. Node that ran before the command, background commands and processes started on purpose with `&`, `nohup` or a process manager are left alone, and Claude is told which PIDs were ended.
+**Finished commands leave no Node behind.** After a shell command Claude runs finishes, the mod ends the Node processes it started and left running, such as a test runner, its workers and their esbuild service: `SIGTERM`, then `SIGKILL` after a second. Tools such as esbuild count too, background commands are followed until they stop, and processes started on purpose with `&`, `nohup` or a process manager are left alone. `/node-close` lists orphaned Node anywhere, with CPU use, and ends the ones you name.
 
 ![Side-by-side Claude Code session: on the left three finished test runs leave Node runners, workers and esbuild holding 940 MB; on the right each run's leftovers are closed when it finishes and a toast reports the count](https://raw.githubusercontent.com/AnnihilationWizard/node-close/main/docs/images/preview.svg)
 
