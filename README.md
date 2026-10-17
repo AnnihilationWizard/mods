@@ -39,7 +39,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ### you-should-know-relay
 
-**Claude hears the heads-up too.** When the built-in you-should-know plugin shows a heads-up above the prompt, the mod hands the same heads-up to Claude, while it stays on your screen as before.
+**Claude hears the heads-up too.** When the built-in you-should-know plugin shows a heads-up above the prompt, the mod hands the same heads-up to Claude, while it stays on your screen as before. Use it in a terminal session: as of Claude Code 2.1.302, the Code tab of the Claude desktop app shows no heads-ups, so there is nothing to forward.
 
 ![Side-by-side Claude Code session: on the left a heads-up is pasted in by hand, on the right the same heads-up is forwarded to Claude with a confirming toast](https://raw.githubusercontent.com/AnnihilationWizard/you-should-know-relay/main/docs/images/preview.svg)
 
