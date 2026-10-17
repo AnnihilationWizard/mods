@@ -51,7 +51,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ### secret-guard
 
-**Secrets stop at the commit.** When a session starts in a Git project, or Claude enters a worktree, the mod checks for a gitleaks pre-commit hook and adds one if it is missing, with pre-commit, Lefthook, or Husky in JS/TS projects that use it. With both pre-commit and Lefthook installed, `/secret-guard-use` picks one, switches the projects it set up and can remove the other. It fixes worktrees missing their config, reminds you to commit the hook file, and never rewrites an existing config or adds dependencies unless you opt in. Needs `gitleaks` and pre-commit or Lefthook.
+**Secrets stop at the commit.** When a session starts in a Git project, or Claude enters a worktree, the mod checks for a gitleaks pre-commit hook and adds one if it is missing, with pre-commit, Lefthook, or Husky in JS/TS projects that use it. With both pre-commit and Lefthook installed, `/secret-guard-use` picks one, switches the projects it set up and can remove the other. It fixes worktrees missing their config, reminds you to commit the hook file, and never rewrites an existing config or adds dependencies unless you opt in. Needs `gitleaks` and pre-commit or Lefthook. Tested on macOS and Windows.
 
 ![Side-by-side terminal: on the left a fresh clone has no hook and a commit with a GitHub token lands in history; on the right secret-guard sets up a gitleaks hook when Claude Code starts and the same commit is stopped](https://raw.githubusercontent.com/AnnihilationWizard/secret-guard/main/docs/images/preview.svg)
 
