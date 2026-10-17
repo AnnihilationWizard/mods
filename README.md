@@ -29,7 +29,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
 | [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
 | [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks pre-commit hook to each Git project and worktree you open, with pre-commit, Lefthook or Husky |
-| [node-close](https://github.com/AnnihilationWizard/node-close) | Ends the Node processes a finished command left running, such as test runners and their workers |
+| [node-close](https://github.com/AnnihilationWizard/node-close) | Ends the Node processes a finished command left running, such as test runners and esbuild; `/node-close` finds orphaned ones |
 
 ### quiet-diffs
 
