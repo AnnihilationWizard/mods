@@ -26,6 +26,11 @@
       "name": "secret-guard",
       "description": "Add a gitleaks pre-commit hook to each Git project you open in Claude Code, with pre-commit, Lefthook or Husky",
       "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/secret-guard.git" }
+    },
+    {
+      "name": "node-close",
+      "description": "End the Node processes a finished command left running, such as test runners and their workers",
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/node-close.git" }
     }
   ]
 }

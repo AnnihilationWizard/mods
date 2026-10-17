@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#mods"><img src="https://img.shields.io/badge/Mods-4-green.svg" alt="4 mods"></a>
+  <a href="#mods"><img src="https://img.shields.io/badge/Mods-5-green.svg" alt="5 mods"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
   <a href=".claude-plugin/marketplace.json"><img src="https://img.shields.io/badge/Type-Plugin%20marketplace-6E7681.svg" alt="Plugin marketplace"></a>
 </p>
@@ -29,6 +29,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | [you-should-know-relay](https://github.com/AnnihilationWizard/you-should-know-relay) | Forwards each you-should-know heads-up to Claude, so you no longer paste it in yourself |
 | [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
 | [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks pre-commit hook to each Git project and worktree you open, with pre-commit, Lefthook or Husky |
+| [node-close](https://github.com/AnnihilationWizard/node-close) | Ends the Node processes a finished command left running, such as test runners and their workers |
 
 ### quiet-diffs
 
@@ -54,6 +55,12 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ![Side-by-side terminal: on the left a fresh clone has no hook and a commit with a GitHub token lands in history; on the right secret-guard sets up a gitleaks hook when Claude Code starts and the same commit is stopped](https://raw.githubusercontent.com/AnnihilationWizard/secret-guard/main/docs/images/preview.svg)
 
+### node-close
+
+**Finished commands leave no Node behind.** After a shell command Claude runs finishes, the mod ends the Node processes it started and left running, such as a test runner, its workers and their esbuild service: `SIGTERM`, then `SIGKILL` after a second. Node that ran before the command, background commands and processes started on purpose with `&`, `nohup` or a process manager are left alone, and Claude is told which PIDs were ended.
+
+![Side-by-side Claude Code session: on the left three finished test runs leave Node runners, workers and esbuild holding 940 MB; on the right each run's leftovers are closed when it finishes and a toast reports the count](https://raw.githubusercontent.com/AnnihilationWizard/node-close/main/docs/images/preview.svg)
+
 ## Install
 
 In a Claude Code **terminal** session, add the marketplace once:
@@ -69,6 +76,7 @@ Then install the mods you want:
 /plugin install you-should-know-relay@annihilationwizard-mods
 /plugin install chrome-close@annihilationwizard-mods
 /plugin install secret-guard@annihilationwizard-mods
+/plugin install node-close@annihilationwizard-mods
 ```
 
 1. Choose a scope for each mod. The **user** scope loads the mod in every session.
