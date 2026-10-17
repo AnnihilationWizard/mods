@@ -45,7 +45,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ### chrome-close
 
-**One headless Chrome at a time.** Before Claude runs a command that may start a headless Chrome, the mod checks for one still running, or for helpers a closed one left behind, and refuses the launch with the PIDs to end. It guards only commands Claude runs.
+**One headless Chrome at a time.** Before Claude runs a Bash or PowerShell command that may start a headless Chrome, the mod checks for one still running, or for helpers a closed one left behind, and refuses the launch with the PIDs and the command to end them. Commands that only read or search, such as `grep playwright` or `Select-String`, still run. Works on macOS, Linux and Windows, and guards only commands Claude runs.
 
 ![Side-by-side Claude Code session: on the left three test runs leave headless Chrome processes holding 1.2 GB; on the right the second launch is refused with the PIDs to end, Claude kills them and the next run goes ahead](https://raw.githubusercontent.com/AnnihilationWizard/chrome-close/main/docs/images/preview.svg)
 
