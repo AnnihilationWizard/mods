@@ -31,6 +31,11 @@
       "name": "node-close",
       "description": "End the Node processes a finished command left running, such as test runners and esbuild; /node-close finds orphaned ones",
       "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/node-close.git" }
+    },
+    {
+      "name": "image-peek",
+      "description": "See the images you paste: thumbnails above the prompt, and an image button under each sent prompt that opens it large",
+      "source": { "source": "url", "url": "https://github.com/AnnihilationWizard/image-peek.git" }
     }
   ]
 }

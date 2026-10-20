@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="#mods"><img src="https://img.shields.io/badge/Mods-5-green.svg" alt="5 mods"></a>
+  <a href="#mods"><img src="https://img.shields.io/badge/Mods-6-green.svg" alt="6 mods"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"></a>
   <a href=".claude-plugin/marketplace.json"><img src="https://img.shields.io/badge/Type-Plugin%20marketplace-6E7681.svg" alt="Plugin marketplace"></a>
 </p>
@@ -30,6 +30,7 @@ Each mod lives in its own repository, with its own version, changelog and issues
 | [chrome-close](https://github.com/AnnihilationWizard/chrome-close) | Allows one headless Chrome at a time and flags helpers left running |
 | [secret-guard](https://github.com/AnnihilationWizard/secret-guard) | Adds a gitleaks pre-commit hook to each Git project and worktree you open, with pre-commit, Lefthook or Husky |
 | [node-close](https://github.com/AnnihilationWizard/node-close) | Ends the Node processes a finished command left running, such as test runners and esbuild; `/node-close` finds orphaned ones |
+| [image-peek](https://github.com/AnnihilationWizard/image-peek) | Shows the images you paste: thumbnails above the prompt and a preview under each sent prompt |
 
 ### quiet-diffs
 
@@ -61,6 +62,12 @@ Each mod lives in its own repository, with its own version, changelog and issues
 
 ![Side-by-side Claude Code session: on the left three finished test runs leave Node runners, workers and esbuild holding 940 MB; on the right each run's leftovers are closed when it finishes and a toast reports the count](https://raw.githubusercontent.com/AnnihilationWizard/node-close/main/docs/images/preview.svg)
 
+### image-peek
+
+**See the images you paste, not just `[Image #1]`.** Each pasted image gets a thumbnail above the prompt, with `↗ #n` to open it before you send. Each sent prompt that carried images gets an `[ Image #n ]` button: hover for a thumbnail, press for a larger view in a side pane, and open the original file at full size from there. Ghostty and kitty show the real picture; iTerm2, Herdr, WezTerm, VS Code and other terminals get a thumbnail in colored half blocks. Converting JPEG and other formats uses macOS `sips`.
+
+![Side-by-side Claude Code session: on the left a pasted image shows only as an [Image #1] tag; on the right a thumbnail sits above the prompt and the sent prompt has an Image #1 button whose hover card shows the picture with zoom and original buttons](https://raw.githubusercontent.com/AnnihilationWizard/image-peek/main/docs/images/preview.svg)
+
 ## Install
 
 In a Claude Code **terminal** session, add the marketplace once:
@@ -77,6 +84,7 @@ Then install the mods you want:
 /plugin install chrome-close@annihilationwizard-mods
 /plugin install secret-guard@annihilationwizard-mods
 /plugin install node-close@annihilationwizard-mods
+/plugin install image-peek@annihilationwizard-mods
 ```
 
 1. Choose a scope for each mod. The **user** scope loads the mod in every session.
