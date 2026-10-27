@@ -1,0 +1,3 @@
+# Keep LF line endings on every OS, so a Windows checkout with core.autocrlf
+# does not rewrite the catalog and docs to CRLF
+* text=auto eol=lf
